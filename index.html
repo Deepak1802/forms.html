@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form-Table</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <style>
+        table{
+	margin-top: 50px;
+	text-align: center;
+	background: rgb(188, 216, 233);
+	color: rgb(22, 21, 21);
+    width: 100%;
+}
+
+#show th, #show td{
+	padding: 13px;
+}
+
+#btna td input{
+	width: 100%;
+}
+.head{
+    background-color: beige;
+    border-color: blue;
+}
+    </style>
+</head>
+<body>
+
+	<center>
+		<table border="4" id="new">
+            <h3 class="head">Enter Data In Table</h3>
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<td><input type="text" name="fname" id="fname"></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Last Name</th>
+					<td><input type="text" name="lname" id="lname"></td>
+				</tr>
+				<tr>
+					<th>Address</th>
+					<td><input type="text" name="address" id="address"></td>
+				</tr>
+				<tr>
+					<th>Pincode</th>
+					<td><input type="text" name="pincode" id="pincode"></td>
+				</tr>
+                <tr>
+					<th>Gender</th>
+					<td><select multiple="multiple" id="gender" size="1">
+                        <option>Male</option>
+                        <option>Female</option>
+                      </select></td>
+				</tr>
+                <tr>
+					<th>Choice of Food(Atleast 2)</th>
+					<td><input type="checkbox" id="food" value="NorthIndian">NorthIndian
+						<input type="checkbox" id="food1" value="Continental">Continental
+						<input type="checkbox" id="food2" value="SouthIndian">SouthIndian
+						<input type="checkbox" id="food3" value="Arabic">Arabic
+						<input type="checkbox" id="food4" value="Italian">Italian
+                      <button onclick="selected()">Submit</button>
+                    </td>
+				</tr>
+                <tr>
+					<th>State</th>
+					<td><input type="text" name="state" id="state"></td>
+				</tr>
+                <tr>
+					<th>Country</th>
+					<td><input type="text" name="country" id="country"></td>
+				</tr>
+				<tr id="btna">
+					<td colspan="2"><input type="button" name="button" id="btn" value="Add" onclick="AddRow()"></td>
+				</tr>
+
+                <tr>
+                    <td colspan="2">
+                        <input type="button" name="reset" value="Reset" id="reset123" onclick="customReset();"/>
+                    </td>
+                </tr>
+
+                
+			</tbody>
+		</table>
+
+		<table border="4" id="show"><br>
+            <h3 class="head">Recorded Details</h3>
+			<thead>
+				<tr>
+					<th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Address</th>
+                    <th>Pincode</th>
+                    <th>Gender</th>
+                    <th>Food</th>
+                    <th>State</th>
+                    <th>Country</th>
+				</tr>
+			</thead>
+		</table>
+	</center>
+    <script src="forms.js"></script>
+</body>
+</html>
